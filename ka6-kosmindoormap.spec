@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.04.3
+%define		kdeappsver	25.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kosmindoormap
 Summary:	A library for rendering multi-level OSM indoor maps
 Name:		ka6-%{kaname}
-Version:	25.04.3
+Version:	25.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	2ddb4d2dc919fda177ccb52a0fae3625
+# Source0-md5:	860fa6ad63f61c8662a3ed550a65663f
 URL:		https://community.kde.org/
 BuildRequires:	Qt6Gui-devel
 BuildRequires:	Qt6Network-devel >= 5.15.2
@@ -117,11 +117,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/IndoorMap.qml
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/IndoorMapAttributionLabel.qml
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/IndoorMapScale.qml
+%{_libdir}/qt6/qml/org/kde/kosmindoormap/IndoorMapView.qml
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/kosmindoormapquickplugin.qmltypes
 %dir %{_libdir}/qt6/qml/org/kde/kosmindoormap/kpublictransport
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/kpublictransport/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/kpublictransport/kosmindoormap_kpublictransport_integration_plugin.qmltypes
+%{_libdir}/qt6/qml/org/kde/kosmindoormap/kpublictransport/PlatformDialog.qml
 %attr(755,root,root) %{_libdir}/qt6/qml/org/kde/kosmindoormap/kpublictransport/libkosmindoormap_kpublictransport_integration_plugin.so
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/kpublictransport/qmldir
 %attr(755,root,root) %{_libdir}/qt6/qml/org/kde/kosmindoormap/libkosmindoormapquickplugin.so
