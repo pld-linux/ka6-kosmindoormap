@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kosmindoormap
 Summary:	A library for rendering multi-level OSM indoor maps
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	fd61471e2d2d2a376ca520fe9f5ac1d4
+# Source0-md5:	35af2ac4afebbbe5886c0aeb3a9338b7
 URL:		https://community.kde.org/
 BuildRequires:	Qt6Gui-devel
 BuildRequires:	Qt6Network-devel >= 5.15.2
@@ -111,9 +111,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %ghost %{_libdir}/libKOSM.so.1
-%attr(755,root,root) %{_libdir}/libKOSM.so.*.*
+%{_libdir}/libKOSM.so.*.*
 %ghost %{_libdir}/libKOSMIndoorMap.so.1
-%attr(755,root,root) %{_libdir}/libKOSMIndoorMap.so.*.*
+%{_libdir}/libKOSMIndoorMap.so.*.*
 %dir %{_libdir}/qt6/qml/org/kde/kosmindoormap
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/IndoorMap.qml
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/IndoorMapAttributionLabel.qml
@@ -125,19 +125,19 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/kpublictransport/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/kpublictransport/kosmindoormap_kpublictransport_integration_plugin.qmltypes
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/kpublictransport/PlatformDialog.qml
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/kosmindoormap/kpublictransport/libkosmindoormap_kpublictransport_integration_plugin.so
+%{_libdir}/qt6/qml/org/kde/kosmindoormap/kpublictransport/libkosmindoormap_kpublictransport_integration_plugin.so
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/kpublictransport/qmldir
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/kosmindoormap/libkosmindoormapquickplugin.so
+%{_libdir}/qt6/qml/org/kde/kosmindoormap/libkosmindoormapquickplugin.so
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/qmldir
 %dir %{_libdir}/qt6/qml/org/kde/osm
 %dir %{_libdir}/qt6/qml/org/kde/osm/editorcontroller
 %{_libdir}/qt6/qml/org/kde/osm/editorcontroller/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/osm/editorcontroller/kosmeditorcontrollerplugin.qmltypes
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/osm/editorcontroller/libkosmeditorcontrollerplugin.so
+%{_libdir}/qt6/qml/org/kde/osm/editorcontroller/libkosmeditorcontrollerplugin.so
 %{_libdir}/qt6/qml/org/kde/osm/editorcontroller/qmldir
 %{_datadir}/qlogging-categories6/org_kde_kosmindoormap.categories
 %ghost %{_libdir}/libKOSMIndoorRouting.so.?
-%attr(755,root,root) %{_libdir}/libKOSMIndoorRouting.so.*.*
+%{_libdir}/libKOSMIndoorRouting.so.*.*
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/AmenityListDelegate.qml
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/AmenitySearchDialog.qml
 %{_libdir}/qt6/qml/org/kde/kosmindoormap/FloorLevelSelector.qml
@@ -151,7 +151,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/qt6/qml/org/kde/kosmindoorrouting
 %{_libdir}/qt6/qml/org/kde/kosmindoorrouting/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/kosmindoorrouting/kosmindoorroutingquickplugin.qmltypes
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/kosmindoorrouting/libkosmindoorroutingquickplugin.so
+%{_libdir}/qt6/qml/org/kde/kosmindoorrouting/libkosmindoorroutingquickplugin.so
 %{_libdir}/qt6/qml/org/kde/kosmindoorrouting/qmldir
 
 %files devel
