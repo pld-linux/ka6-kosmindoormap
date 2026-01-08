@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.12.0
+%define		kdeappsver	25.12.1
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kosmindoormap
 Summary:	A library for rendering multi-level OSM indoor maps
 Name:		ka6-%{kaname}
-Version:	25.12.0
+Version:	25.12.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	3ae07df0b16980c1131bbcd01437b3f0
+# Source0-md5:	302efa8862540d0cc2f3d047f9c34857
 URL:		https://community.kde.org/
 BuildRequires:	Qt6Gui-devel
 BuildRequires:	Qt6Network-devel >= 5.15.2
