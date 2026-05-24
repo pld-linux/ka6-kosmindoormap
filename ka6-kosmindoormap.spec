@@ -65,6 +65,34 @@ Technical:
 - Based on OSM raw data tiles from maps.kde.org.
 - Pre-loading and caching API for offline support in applications.
 
+%description -l pl.UTF-8
+Biblioteka i komponent QML do renderowania wielopoziomowych
+wewnętrznych map OSM. Np. (dużej) stacji kolejowej.
+
+## Właściwości
+
+Dotyczące użytkownika:
+- Separacja pięter w danych OSM i nawigacja między nimi przy użyciu
+  schodów, wind, itp.
+- Model informacji do pokazywania szczegółów na temat wybranego
+  obiektu.
+- Wsparcie dla identyfikacji peronów na stacjach kolejowych i bram na
+  lotniskach w danych map.
+- Integracja z liniami metadanych KPublicTransport aby pokazywać
+  ikonki linii kolejowych na peronach.
+- Integracja z KPublicTransport, aby pokazać możliwość wynajęcia
+  rowerów i innych pojazdów.
+- Integracja z KPublicTransport, aby pokazać status w czasie
+  rzeczywistym wind, itp. sprzętu.
+
+Techniczne:
+- Integracja z interfejsami QPainter i QML.
+- Stylowanie używając MapCSS.
+- Wsparcie dla wybierania do implementacji interakcji z elementami
+  map.
+- Bazowanie na surowych danych OSM z maps.kde.org.
+- API pamięci podręcznej dla wsparcia trybu offline w aplikacjach.
+
 %package devel
 Summary:	Header files for %{kaname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kaname}
